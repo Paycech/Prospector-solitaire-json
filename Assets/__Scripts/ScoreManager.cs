@@ -48,14 +48,13 @@ public class ScoreManager : MonoBehaviour {
             case eScoreEvent.draw:
             case eScoreEvent.gameWin:
             case eScoreEvent.gameLoss:
-                chain = 0;
+                chain = 1;
                 score += scoreRun;
-                scoreRun = 0;
+                scoreRun = 1;
                 break;
             
             case eScoreEvent.mine:
-                chain++;
-                scoreRun += chain;
+                scoreRun += 1;
                 break;
         }
 
