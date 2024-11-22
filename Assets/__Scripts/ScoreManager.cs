@@ -54,7 +54,9 @@ public class ScoreManager : MonoBehaviour {
                 break;
             
             case eScoreEvent.mine:
-                scoreRun += 1;
+                 chain = 1;
+                score += scoreRun;
+                scoreRun = 1;
                 break;
         }
 
@@ -70,7 +72,7 @@ public class ScoreManager : MonoBehaviour {
                     HIGH_SCORE = score;
                     PlayerPrefs.SetInt("ProspectorHighScore", score);
                 } else {
-                    print("Your finam score for the game wwas: " + score);
+                    print("Your final score for the game was: " + score);
                 }
                 break;
             
